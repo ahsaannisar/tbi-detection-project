@@ -1,0 +1,31 @@
+.venv/
+venv/
+__pycache__/
+.env
+.env.*
+!.env.example
+node_modules/
+.DS_Store
+*.pth
+*.pt
+*.h5
+*.keras
+
+# Cache
+.keras-cache/
+.ipynb_checkpoints/
+
+# Large datasets
+TBI-6000 data/
+segmentation-dataset/
+segmentation-slices/
+tbi-split/
+
+# Generated experiment outputs
+experiments/
+unet_results_v2/
+
+# Additional model formats
+*.onnx
+*.pkl
+*.joblib

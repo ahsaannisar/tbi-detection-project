@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="TBI-AI: Deep learning platform for Traumatic Brain Injury detection and experimental CT segmentation." />
+    <title>TBI-AI | Traumatic Brain Injury Detection Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <a href="#/home" class="brand-wrap" aria-label="TBI-AI Home">
+          <div class="brand-mark">
+            <span class="brand-icon">🧠</span>
+            <span class="brand-text">TBI-AI</span>
+          </div>
+          <div class="brand-info">
+            <span class="brand-title">TBI Detection System</span>
+            <span class="brand-subtitle">Deep Learning Platform</span>
+          </div>
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a class="nav-link" href="#/home" data-route="/home">Home</a>
+          <a class="nav-link" href="#/analyze" data-route="/analyze">Analyze</a>
+          <a class="nav-link" href="#/results" data-route="/results">Results</a>
+          <a class="nav-link" href="#/performance" data-route="/performance">Performance</a>
+          <a class="nav-link" href="#/research" data-route="/research">Research</a>
+          <a class="nav-link" href="#/about" data-route="/about">About</a>
+        </nav>
+
+        <div class="status-wrap">
+          <div id="apiHealthBadge" class="status-pill status-loading" title="Checking API status...">
+            <span class="status-dot"></span>
+            <span class="status-text">Checking API...</span>
+          </div>
+          <div class="prototype-badge">Research Prototype</div>
+        </div>
+      </header>
+
+      <main id="app" class="app-shell" aria-live="polite"></main>
+
+      <footer class="app-footer">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <strong>TBI-AI Platform</strong> — Traumatic Brain Injury Detection using Deep Learning
+          </div>
+          <div class="footer-disclaimer">
+            Academic Research Prototype • Not validated for clinical diagnosis or triage
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+
+    <!-- Image Modal for Fullscreen View -->
+    <div id="imageModal" class="modal-backdrop hidden" tabindex="-1" role="dialog" aria-modal="true">
+      <div class="modal-content">
+        <button type="button" class="modal-close" id="modalCloseBtn" aria-label="Close modal">&times;</button>
+        <div class="modal-body">
+          <img id="modalImage" src="" alt="Fullscreen view" />
+        </div>
+      </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+  </body>
+</html>
